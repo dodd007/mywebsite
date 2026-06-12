@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Satish | My Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -130,7 +131,11 @@
       border-color: #a89cf7;
       transform: translateY(-4px);
     }
-    .skill-card .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    .skill-card .icon {
+      font-size: 2rem;
+      margin-bottom: 0.6rem;
+      color: #a89cf7;
+    }
     .skill-card p { font-size: 0.9rem; color: #ccc; }
 
     /* PROJECTS */
@@ -152,6 +157,7 @@
     .tag {
       display: inline-block;
       margin-top: 0.8rem;
+      margin-right: 4px;
       padding: 3px 10px;
       background: #7f77dd22;
       color: #a89cf7;
@@ -177,6 +183,9 @@
       text-decoration: none;
       font-size: 0.9rem;
       transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     .contact-links a:hover { background: #7f77dd22; }
 
@@ -204,8 +213,8 @@
 
   <div class="hero">
     <div class="avatar">S</div>
-    <h1>Hi, I'm <span>Satish</span> ðŸ‘‹</h1>
-    <p>Developer & Server Enthusiast. Building cool things on Coolify + Vultr.</p>
+    <h1>Hi, I'm <span>Satish</span></h1>
+    <p>Developer &amp; Server Enthusiast. Building cool things on Coolify + Vultr.</p>
     <a href="#contact" class="btn">Get in Touch</a>
   </div>
 
@@ -221,12 +230,30 @@
   <section id="skills">
     <h2>My Skills</h2>
     <div class="skills-grid">
-      <div class="skill-card"><div class="icon">ðŸŒ</div><p>Web Development</p></div>
-      <div class="skill-card"><div class="icon">âš™ï¸</div><p>.NET Development</p></div>
-      <div class="skill-card"><div class="icon">ðŸ–¥ï¸</div><p>Server Management</p></div>
-      <div class="skill-card"><div class="icon">ðŸ³</div><p>Docker & Coolify</p></div>
-      <div class="skill-card"><div class="icon">ðŸ—„ï¸</div><p>Databases</p></div>
-      <div class="skill-card"><div class="icon">ðŸ”’</div><p>SSL & Security</p></div>
+      <div class="skill-card">
+        <div class="icon"><i class="fa-solid fa-globe"></i></div>
+        <p>Web Development</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon"><i class="fa-solid fa-code"></i></div>
+        <p>.NET Development</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon"><i class="fa-solid fa-server"></i></div>
+        <p>Server Management</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon"><i class="fa-brands fa-docker"></i></div>
+        <p>Docker &amp; Coolify</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon"><i class="fa-solid fa-database"></i></div>
+        <p>Databases</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon"><i class="fa-solid fa-lock"></i></div>
+        <p>SSL &amp; Security</p>
+      </div>
     </div>
   </section>
 
@@ -234,19 +261,19 @@
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <h3>My Website</h3>
+        <h3><i class="fa-solid fa-earth-asia" style="color:#a89cf7;margin-right:8px"></i>My Website</h3>
         <p>Personal website hosted on Coolify + Vultr with custom domain and SSL.</p>
         <span class="tag">HTML</span>
         <span class="tag">Coolify</span>
       </div>
       <div class="project-card">
-        <h3>.NET Web App</h3>
+        <h3><i class="fa-solid fa-microchip" style="color:#a89cf7;margin-right:8px"></i>.NET Web App</h3>
         <p>ASP.NET web application self-hosted on private server infrastructure.</p>
         <span class="tag">.NET</span>
         <span class="tag">Docker</span>
       </div>
       <div class="project-card">
-        <h3>More Coming Soon</h3>
+        <h3><i class="fa-solid fa-rocket" style="color:#a89cf7;margin-right:8px"></i>More Coming Soon</h3>
         <p>Currently working on exciting new projects. Stay tuned!</p>
         <span class="tag">In Progress</span>
       </div>
@@ -256,17 +283,24 @@
   <section id="contact">
     <h2>Contact Me</h2>
     <div class="contact-box">
-      <p>Feel free to reach out â€” I'm always open to new opportunities!</p>
+      <p>Feel free to reach out — I'm always open to new opportunities!</p>
       <div class="contact-links">
-        <a href="mailto:your@email.com">ðŸ“§ Email</a>
-        <a href="https://github.com/dodd007">ðŸ™ GitHub</a>
-        <a href="#">ðŸ’¼ LinkedIn</a>
+        <a href="mailto:your@email.com">
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
+        <a href="https://github.com/dodd007">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
       </div>
     </div>
   </section>
 
   <footer>
-    Â© 2026 Satish Â· Hosted on Coolify + Vultr ðŸš€
+    &copy; 2026 Satish &middot; Hosted on Coolify + Vultr
+    <i class="fa-solid fa-rocket" style="color:#a89cf7;margin-left:6px"></i>
   </footer>
 
 </body>
