@@ -1,24 +1,273 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Satish | My Website</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f1a;
+      color: #e0e0e0;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: #1a1a2e;
+      border-bottom: 1px solid #7f77dd44;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #a89cf7;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    nav ul a:hover { color: #a89cf7; }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+    }
+    .hero .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #7f77dd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 auto 1.5rem;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      color: #ffffff;
+      margin-bottom: 0.8rem;
+    }
+    .hero h1 span { color: #a89cf7; }
+    .hero p {
+      font-size: 1.1rem;
+      color: #aaa;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background: #7f77dd;
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn:hover { background: #534ab7; transform: translateY(-2px); }
+
+    /* SECTIONS */
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      color: #a89cf7;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    /* ABOUT */
+    .about-box {
+      background: #1a1a2e;
+      border: 1px solid #7f77dd44;
+      border-radius: 16px;
+      padding: 2rem;
+      font-size: 1rem;
+      color: #bbb;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .skill-card {
+      background: #1a1a2e;
+      border: 1px solid #7f77dd44;
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .skill-card:hover {
+      border-color: #a89cf7;
+      transform: translateY(-4px);
+    }
+    .skill-card .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    .skill-card p { font-size: 0.9rem; color: #ccc; }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+    }
+    .project-card {
+      background: #1a1a2e;
+      border: 1px solid #7f77dd44;
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .project-card:hover { border-color: #a89cf7; }
+    .project-card h3 { color: #fff; margin-bottom: 0.5rem; font-size: 1.05rem; }
+    .project-card p { color: #aaa; font-size: 0.9rem; line-height: 1.6; }
+    .tag {
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 3px 10px;
+      background: #7f77dd22;
+      color: #a89cf7;
+      border-radius: 50px;
+      font-size: 0.78rem;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: #1a1a2e;
+      border: 1px solid #7f77dd44;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .contact-box p { color: #aaa; margin-bottom: 1.5rem; }
+    .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .contact-links a {
+      padding: 0.6rem 1.4rem;
+      border: 1px solid #7f77dd88;
+      color: #a89cf7;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .contact-links a:hover { background: #7f77dd22; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #555;
+      font-size: 0.85rem;
+      border-top: 1px solid #7f77dd22;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Hello! My website is live! 🎉</h1>
+  <nav>
+    <div class="logo">Satish</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <h2>About Me</h2>
-  <p>Welcome to my website!</p>
+  <div class="hero">
+    <div class="avatar">S</div>
+    <h1>Hi, I'm <span>Satish</span> ðŸ‘‹</h1>
+    <p>Developer & Server Enthusiast. Building cool things on Coolify + Vultr.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </div>
 
-  <h2>My Skills</h2>
-  <ul>
-    <li>Web Development</li>
-    <li>.NET Development</li>
-    <li>Server Management</li>
-  </ul>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-box">
+      I am a passionate developer who loves building and hosting web applications.
+      I self-host my projects using <strong style="color:#a89cf7">Coolify</strong> on a
+      <strong style="color:#a89cf7">Vultr</strong> server. Always learning and building!
+    </div>
+  </section>
 
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="icon">ðŸŒ</div><p>Web Development</p></div>
+      <div class="skill-card"><div class="icon">âš™ï¸</div><p>.NET Development</p></div>
+      <div class="skill-card"><div class="icon">ðŸ–¥ï¸</div><p>Server Management</p></div>
+      <div class="skill-card"><div class="icon">ðŸ³</div><p>Docker & Coolify</p></div>
+      <div class="skill-card"><div class="icon">ðŸ—„ï¸</div><p>Databases</p></div>
+      <div class="skill-card"><div class="icon">ðŸ”’</div><p>SSL & Security</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>My Website</h3>
+        <p>Personal website hosted on Coolify + Vultr with custom domain and SSL.</p>
+        <span class="tag">HTML</span>
+        <span class="tag">Coolify</span>
+      </div>
+      <div class="project-card">
+        <h3>.NET Web App</h3>
+        <p>ASP.NET web application self-hosted on private server infrastructure.</p>
+        <span class="tag">.NET</span>
+        <span class="tag">Docker</span>
+      </div>
+      <div class="project-card">
+        <h3>More Coming Soon</h3>
+        <p>Currently working on exciting new projects. Stay tuned!</p>
+        <span class="tag">In Progress</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-box">
+      <p>Feel free to reach out â€” I'm always open to new opportunities!</p>
+      <div class="contact-links">
+        <a href="mailto:your@email.com">ðŸ“§ Email</a>
+        <a href="https://github.com/dodd007">ðŸ™ GitHub</a>
+        <a href="#">ðŸ’¼ LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Â© 2026 Satish Â· Hosted on Coolify + Vultr ðŸš€
+  </footer>
 
 </body>
 </html>
